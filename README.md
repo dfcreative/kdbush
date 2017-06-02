@@ -1,4 +1,4 @@
-## kdgrass [![Build Status](https://travis-ci.org/dfcreative/kdgrass.svg?branch=master)](https://travis-ci.org/dfcreative/kdgrass) [![Simply Awesome](https://img.shields.io/badge/simply-awesome-brightgreen.svg)](https://github.com/dfcreative/projects)
+## kdgrass  [![unstable](https://img.shields.io/badge/stability-unstable-green.svg)](http://github.com/badges/stability-badges) [![Build Status](https://img.shields.io/travis/dfcreative/kdgrass.svg)](https://travis-ci.org/dfcreative/kdgrass)
 
 A very fast static spatial index for 2D points based on a flat KD-tree, with optimized API, compared to [KDBush](https://github.com/mourner/kdbush).
 

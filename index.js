@@ -6,11 +6,11 @@
 
 'use strict'
 
-module.exports = KDBush
+module.exports = KDTree
 
 //optimized kdbush
-function KDBush(points, nodeSize) {
-    if (!(this instanceof KDBush)) return new KDBush(points, nodeSize)
+function KDTree(points, nodeSize) {
+    if (!(this instanceof KDTree)) return new KDTree(points, nodeSize)
 
     this.nodeSize = nodeSize || 64;
 
@@ -27,7 +27,7 @@ function KDBush(points, nodeSize) {
 }
 
 
-KDBush.prototype.range = function range(minX, minY, maxX, maxY) {
+KDTree.prototype.range = function range(minX, minY, maxX, maxY) {
     var ids = this.ids, coords = this.coords, nodeSize = this.nodeSize
     var stack = [0, ids.length - 1, 0];
     var result = [];
@@ -72,7 +72,7 @@ KDBush.prototype.range = function range(minX, minY, maxX, maxY) {
 }
 
 
-KDBush.prototype.within = function within(qx, qy, r) {
+KDTree.prototype.within = function within(qx, qy, r) {
     var ids = this.ids, coords = this.coords, nodeSize = this.nodeSize
     var stack = [0, ids.length - 1, 0];
     var result = [];
