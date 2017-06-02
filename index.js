@@ -14,7 +14,7 @@ function KDTree(points, nodeSize) {
 
     this.nodeSize = nodeSize || 64;
 
-    this.coords = points;
+    this.coords = points.slice();
 
     var l = Math.floor(points.length / 2)
     this.ids = Array(l);

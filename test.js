@@ -29,7 +29,7 @@ var coords = [
     87,96,98,96,82];
 
 test('creates an index', function (t) {
-    var index = kdbush(points.slice(), 10);
+    var index = kdbush(points, 10);
 
     t.same(index.ids, ids, 'ids are kd-sorted');
     t.same(index.coords, coords, 'coords are kd-sorted');
@@ -38,7 +38,7 @@ test('creates an index', function (t) {
 });
 
 test('range search', function (t) {
-    var pts = points.slice()
+    var pts = points
 
     var index = kdbush(pts, 10);
 
@@ -64,7 +64,7 @@ test('range search', function (t) {
 });
 
 test('radius search', function (t) {
-    var pts = points.slice()
+    var pts = points
 
     var index = kdbush(pts, 10);
 
