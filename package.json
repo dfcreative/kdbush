@@ -1,23 +1,18 @@
 {
-  "name": "kdbush",
-  "version": "1.0.1",
-  "description": "A very fast static 2D index for points based on kd-tree.",
-  "main": "src/kdbush.js",
+  "name": "kdgrass",
+  "version": "1.0.0",
+  "description": "Faster static 2D index for points based on kd-tree.",
+  "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/mourner/kdbush.git"
+    "url": "git://github.com/dfcreative/kdgrass.git"
   },
   "devDependencies": {
-    "eslint": "^3.8.1",
-    "eslint-config-mourner": "^2.0.1",
     "tape": "^4.6.2"
   },
   "scripts": {
     "pretest": "eslint test.js src",
     "test": "tape test.js"
-  },
-  "eslintConfig": {
-    "extends": "mourner"
   },
   "keywords": [
     "index",
@@ -29,5 +24,8 @@
     "geometry"
   ],
   "author": "Vladimir Agafonkin",
+  "contributors": [
+    "Dima Yv"
+  ],
   "license": "ISC"
 }
