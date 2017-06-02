@@ -14,7 +14,7 @@ let ids2 = grass.within(10, 10, 5);      // radius search - x, y, radius
 
 ## API
 
-#### let grass = kdgrass(points, nodeSize?)
+### let grass = kdgrass(points, nodeSize?)
 
 Creates an index from the given points.
 
@@ -25,7 +25,7 @@ Creates an index from the given points.
 let index = kdgrass(points, 64);
 ```
 
-#### grass.range(minX, minY, maxX, maxY)
+### grass.range(minX, minY, maxX, maxY)
 
 Finds all items within the given bounding box and returns an array of indices that refer to the items in the original `points` input array.
 
@@ -33,7 +33,7 @@ Finds all items within the given bounding box and returns an array of indices th
 let results = index.range(10, 10, 20, 20).map((id) => points[id]);
 ```
 
-#### grass.within(x, y, radius)
+### grass.within(x, y, radius)
 
 Finds all items within a given radius from the query point and returns an array of indices.
 
@@ -43,5 +43,5 @@ let results = index.within(10, 10, 5).map((id) => points[id]);
 
 ## See also
 
-* [kdbush](https://github.com/mourner/kdbush) − initial implementation with more verbose API.
-* [rbush](https://github.com/mourner/rbush) — even more verbose implementation with dynamic insertion/removal API.
+* [kdbush](https://github.com/mourner/kdbush) − initial implementation with verbose API.
+* [rbush](https://github.com/mourner/rbush) — r-tree implementation with  insertion/removal API.
