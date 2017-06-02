@@ -14,15 +14,15 @@ let ids2 = grass.within(10, 10, 5);      // radius search - x, y, radius
 
 ## API
 
-#### kdgrass(points, nodeSize?)
+#### let grass = kdgrass(points, nodeSize?)
 
 Creates an index from the given points.
 
-- `points`: Input array of points in [x, y, x, y, ...] form.
+- `points`: Input array of points in `[x, y, x, y, ...]` form.
 - `nodeSize`: Size of the KD-tree node, `64` by default. Higher means faster indexing but slower search, and vise versa.
 
 ```js
-var index = kdgrass(points, 64);
+let index = kdgrass(points, 64);
 ```
 
 #### grass.range(minX, minY, maxX, maxY)
@@ -30,7 +30,7 @@ var index = kdgrass(points, 64);
 Finds all items within the given bounding box and returns an array of indices that refer to the items in the original `points` input array.
 
 ```js
-var results = index.range(10, 10, 20, 20).map((id) => points[id]);
+let results = index.range(10, 10, 20, 20).map((id) => points[id]);
 ```
 
 #### grass.within(x, y, radius)
@@ -38,7 +38,7 @@ var results = index.range(10, 10, 20, 20).map((id) => points[id]);
 Finds all items within a given radius from the query point and returns an array of indices.
 
 ```js
-var results = index.within(10, 10, 5).map((id) => points[id]);
+let results = index.within(10, 10, 5).map((id) => points[id]);
 ```
 
 ## See also
