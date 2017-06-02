@@ -1,6 +1,6 @@
 {
   "name": "kdgrass",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "KDBush with flat API",
   "main": "index.js",
   "repository": {
