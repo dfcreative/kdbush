@@ -1,11 +1,15 @@
 ## kdgrass  [![unstable](https://img.shields.io/badge/stability-unstable-green.svg)](http://github.com/badges/stability-badges) [![Build Status](https://img.shields.io/travis/dfcreative/kdgrass.svg)](https://travis-ci.org/dfcreative/kdgrass)
 
-A very fast static spatial index for 2D points based on a flat KD-tree, with optimized API, compared to [KDBush](https://github.com/mourner/kdbush).
+[KDBush](https://github.com/mourner/kdbush) with flat API, which turns out to be even faster.
+
+[![npm install kdgrass](https://nodei.co/npm/kdgrass.png?mini=true)](https://npmjs.org/package/kdgrass/)
 
 ```js
-var index = kdgrass(points);              // make an index
-var ids1 = index.range(10, 10, 20, 20);  // bbox search - minX, minY, maxX, maxY
-var ids2 = index.within(10, 10, 5);      // radius search - x, y, radius
+const kdgrass = require('kdgrass')
+
+let grass = kdgrass(points);
+let ids1 = grass.range(10, 10, 20, 20);  // bbox search - minX, minY, maxX, maxY
+let ids2 = grass.within(10, 10, 5);      // radius search - x, y, radius
 ```
 
 ## API
@@ -21,7 +25,7 @@ Creates an index from the given points.
 var index = kdgrass(points, 64);
 ```
 
-#### range(minX, minY, maxX, maxY)
+#### grass.range(minX, minY, maxX, maxY)
 
 Finds all items within the given bounding box and returns an array of indices that refer to the items in the original `points` input array.
 
@@ -29,7 +33,7 @@ Finds all items within the given bounding box and returns an array of indices th
 var results = index.range(10, 10, 20, 20).map((id) => points[id]);
 ```
 
-#### within(x, y, radius)
+#### grass.within(x, y, radius)
 
 Finds all items within a given radius from the query point and returns an array of indices.
 
